@@ -1,0 +1,18 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.confirmar{
+    margin-top: 12rem;
+    .wave {
+        color: v.$indigo;
+        animation: wave 3s ease-in-out infinite;
+      }
+    
+    .acciones{
+        justify-content: center;
+        a{
+            color: darken(v.$indigo, 10%);
+            font-size: 2rem;
+        }
+    }
+}

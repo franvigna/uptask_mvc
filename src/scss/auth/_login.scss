@@ -1,0 +1,23 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.login{
+    margin-top: 12rem;
+    
+    .wave {
+        color: v.$cyan;
+        animation: wave 3s ease-in-out infinite;
+    }
+
+
+    input[type="submit"]{
+        @include m.boton(v.$cyan, v.$blanco);
+    }
+
+    .acciones{
+        a{
+            color: darken(v.$cyan, 10%);
+        }
+    }
+    
+}

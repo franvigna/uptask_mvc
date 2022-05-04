@@ -1,0 +1,21 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    margin-top: 5rem;
+    .campo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        label{
+            flex: 0 0 10rem;
+        }
+        input{
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            background: linear-gradient(to right,v.$blanco 0%, lighten(v.$grisClaro, 8%)  50%, v.$blanco 100%);
+        }
+    }  
+}
