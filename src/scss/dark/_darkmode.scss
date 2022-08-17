@@ -1,0 +1,125 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+
+@media (prefers-color-scheme: dark) {
+    $grisDark: #2c2c3b;
+    body{
+        background: $grisDark;
+    }
+
+    .tagline,
+    .formulario label,
+    .login .acciones a,
+    .crear .acciones a,
+    .olvide .acciones a,
+    .listado-tareas p
+    {
+        color: v.$blanco;
+    }
+
+    .descripcion-pagina,
+    .nombre-pagina,
+    .filtros-imputs label{
+        color: v.$grisClaro;
+    }
+
+    .formulario .campo input{
+        background: lighten( $grisDark, 15% );
+        &::placeholder{
+            color: darken(v.$grisClaro, 30%);
+        }
+    }
+
+    .alerta.error{
+        background: v.$blanco;
+    }
+
+    .sidebar{
+
+        @include m.tablet {
+                background: darken( $grisDark, 10% );
+        }
+        .sidebar-nav a{
+            &.activo,
+            &:hover{
+                background: darken(v.$azul, 10%);
+            }
+        }
+    
+    }
+    
+
+    .barra-mobile,
+    .barra{
+        background: darken($grisDark, 7%);
+
+    }
+    .barra{
+
+        p{
+            color: v.$grisClaro;
+            span{
+            color: v.$azul;
+            }
+        }
+    }
+
+    .filtros{
+        background: lighten( $grisDark, 15% );
+        h2{
+            color:v.$blanco;
+        }
+    }
+
+    .dashboard{
+        background: $grisDark;
+        
+        .enlace{
+            color: v.$grisClaro;
+            &:hover{
+                color: darken(v.$grisClaro, 20%);
+            }
+        }
+        .formulario input:not([type=submit]){
+            background: lighten($grisDark,10%);
+            color: v.$blanco;
+            &::placeholder{
+                color: darken(v.$grisClaro, 30%);
+            }
+        }
+
+    }
+
+    .listado-proyectos .proyecto a{
+        background: lighten($color: $grisDark, $amount: 20%);
+        &:hover{
+            background: lighten($color: $grisDark, $amount: 10%);
+        }
+    }
+    .listado-tareas .tarea{
+        background: lighten($color: $grisDark, $amount: 3%);
+        border: none;
+        color: v.$grisClaro;
+    }
+
+    .perfil .formulario .campo input{
+        color: v.$gris;
+    }
+
+    .modal .formulario{
+        background: $grisDark;
+        input[type="text"]{
+            background: lighten($grisDark,10%);
+            border: none;
+            color: v.$blanco;
+            &::placeholder{
+                color: darken(v.$grisClaro, 20%);
+            }
+        }
+        legend{
+            color:v.$grisClaro;
+        }
+    }
+
+}

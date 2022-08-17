@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+.waby{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+ 
+      h2 {
+       
+          letter-spacing: 2vmin;
+          font-family: "Work Sans", sans-serif;
+          font-size: 15vmin;
+          position: absolute;
+          top: 3rem;
+      }
+      
+      .border {
+    
+        color: rgb(255, 255, 255);  
+        text-shadow:
+          -1px -1px 0 rgb(0, 0, 0), 
+          1px -1px 0 rgb(0, 0, 0),
+          -1px 1px 0 rgb(0, 0, 0),
+          1px 1px 0 rgb(0, 0, 0);  
+      }
+      
+      .wave {
+        color: rgb(0, 0, 0);
+        animation: wave 3s ease-in-out infinite;
+      }
+      
+      
+      @keyframes wave {
+        0%, 100% {
+          clip-path: polygon(0% 47%, 10% 48%, 33% 54%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+        }
+      
+        50% {
+          clip-path: polygon(0% 60%, 15% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+        }
+      }
+}

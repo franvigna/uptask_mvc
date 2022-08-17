@@ -8,6 +8,7 @@ use Controllers\TareaController;
 use MVC\Router;
 $router = new Router();
 
+
 // Login
 $router->get('/',[LoginController::class, 'login']);
 $router->post('/',[LoginController::class, 'login']);
